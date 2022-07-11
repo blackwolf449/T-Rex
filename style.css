@@ -1,11 +1,11 @@
-h1{
+h1 {
     display: flex;
     justify-content: center;
 }
-.start{
+.start {
     padding: 0 20px;
 }
-.score{
+.score {
     justify-content: space-around;
     display: flex;
     flex-direction: row;
@@ -16,70 +16,82 @@ h1{
     padding: 10px;
     margin-bottom: 10px;
 }
-.game{
+.game {
     border: 1px solid black;
     margin: 0 auto;
     width: 800px;
     height: 300px;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     border-radius: 5px;
     position: relative;
 }
-.player{
+.player {
     position: absolute;
     background-color: black;
     width: 20px;
     height: 50px;
-    margin-left: 40px;
+    margin-left: 200px;
     border-radius: 10px;
 }
-.hidePlayer{
+.hidePlayer {
     display: none !important;
 }
 
-.cactus{
+.cactus {
     background-color: green;
     height: 50px;
     border-radius: 5px;
     position: absolute;
 }
 @keyframes cactus {
-    0%{
+    0% {
         margin-left: 95%;
     }
-    100%{
+    100% {
         margin-left: 0;
     }
 }
-.mediumCactus{
+.mediumCactus {
     width: 20px;
 }
-.bigCactus{
+.bigCactus {
     width: 40px;
 }
-.smallCactus{
+.smallCactus {
     width: 10px;
 }
 
-
-.jump{
+.jump {
     animation: jump 1s ease-in-out;
 }
 @keyframes jump {
-    0%{
+    0% {
         margin-bottom: 0;
     }
-    20%{
+    20% {
         margin-bottom: 140px;
     }
-    50%{
+    50% {
         margin-bottom: 150px;
     }
-    80%{
+    80% {
         margin-bottom: 140px;
     }
-    100%{
+    100% {
         margin-bottom: 0;
     }
+}
+
+h2 {
+    font-size: 50px;
+    position: absolute;
+    left: 45%;
+    right: 45%;
+}
+
+hr {
+    width: 100%;
+    border: 1px solid black;
+    margin-top: 60px;
 }
