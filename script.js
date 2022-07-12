@@ -20,13 +20,7 @@ bestScore.innerText = `Best score: ${best}`
 score.innerText = `Score: ${atualScore}`
 
 document.body.onkeydown = (e) => {
-    if (
-        e.key != ' ' ||
-        jump == true ||
-        playerExists == false ||
-        gameOver == true
-    )
-        return
+    if (e.key != ' ' || jump || playerExists || gameOver) return
     jump = true
     player.classList.add('jump')
     setTimeout(() => {
@@ -36,7 +30,7 @@ document.body.onkeydown = (e) => {
 }
 
 start.onclick = () => {
-    if (isRunning == true || gameOver == true) return
+    if (isRunning || gameOver) return
     player.classList.remove('hidePlayer')
     playerExists = true
     isRunning = true
