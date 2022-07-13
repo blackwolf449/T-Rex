@@ -20,7 +20,7 @@ bestScore.innerText = `Best score: ${best}`
 score.innerText = `Score: ${atualScore}`
 
 document.body.onkeydown = (e) => {
-    if (e.key != ' ' || jump || playerExists || gameOver) return
+    if (e.key != ' ' || jump || !playerExists || gameOver) return
     jump = true
     player.classList.add('jump')
     setTimeout(() => {
