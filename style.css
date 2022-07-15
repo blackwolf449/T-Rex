@@ -63,7 +63,7 @@ h1 {
 }
 
 .jump {
-    animation: jump 1s ease-in-out;
+    animation: jump 1s linear;
 }
 @keyframes jump {
     0% {

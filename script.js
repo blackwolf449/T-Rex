@@ -38,9 +38,8 @@ start.onclick = () => {
     let time = 3000
     let speed = 3000
     let generete = setInterval(() => {
-        genereteCactus(time, speed)
-        if (speed > 1000) speed -= 200
-        if (time >= 1000) time -= 200
+        genereteCactus(speed)
+        if (speed > 800) speed -= 200
     }, time)
     let interval = setInterval(() => {
         const playerHit = player.getBoundingClientRect()
@@ -75,14 +74,14 @@ start.onclick = () => {
     }, 10)
 }
 
-function genereteCactus(time, speed) {
+function genereteCactus(speed) {
     const div = document.createElement('div')
     const size = getRandomInt(0, 3)
 
     game.append(div)
     div.classList.add('cactus')
     div.classList.add(cactusSize[size])
-    div.style.animation = `cactus ${speed}ms ease-in-out`
+    div.style.animation = `cactus ${speed}ms linear`
 
     cactusHit = document.querySelector('.cactus').getBoundingClientRect()
 
