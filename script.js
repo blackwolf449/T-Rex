@@ -30,9 +30,11 @@ document.body.onkeydown = (e) => {
 }
 
 start.onclick = () => {
-    if (isRunning || gameOver) return
+    if (isRunning) return
+    h2.innerText = ''
     player.classList.remove('hidePlayer')
     playerExists = true
+    gameOver = false
     isRunning = true
 
     let time = 3000
